@@ -1,0 +1,11 @@
+md-toolbar.my-navbar(layout="row" layout-align="center center")
+
+  section(layout="row")
+    md-button(ng-show="login && role == 1" href="#/listJobs") 找工作
+    md-button(ng-show="login && role == 1" href="#/checkDeliveries") 查看投递
+    md-button(ng-show="login && role == 1" href="#/createResume") 创建简历
+    md-button(ng-show="login && role == 2" href="#/selectResumes") 筛选简历
+    md-button(ng-show="login && role == 2" href="#/createJob") 发布职位
+    md-button(ng-hide="login" href="#/signup") 注册
+    md-button(ng-hide="login" href="#/signin") 登录
+    md-button(ng-show="login" ng-click="signout()") 注销登录

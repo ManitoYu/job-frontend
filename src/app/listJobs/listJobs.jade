@@ -1,0 +1,19 @@
+.page.list-jobs-page
+  md-content
+    md-list
+      md-list-item.thead-tr
+        p 职位名称
+        p 薪水
+        p 工作地点
+        p 学历要求
+        p 操作
+
+      md-list-item(ng-repeat="job in jobs")
+        p {{ job.name }}
+        p {{ job.salary }}
+        p {{ job.place }}
+        p {{ job.education }}
+        // p {{ job.duty }}
+        // p {{ job.requirement }}
+        p
+          md-button.md-raised.md-primary(ng-click="deliver(job._id)") 投递

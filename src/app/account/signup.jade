@@ -1,0 +1,26 @@
+.page.signup-page
+
+  md-content
+  
+    .form-box
+
+      md-input-container
+        label 邮箱
+        input(ng-model="account.email")
+
+      md-input-container
+        label 密码
+        input(type="password" ng-model="account.password")
+
+      md-input-container
+        label 确认密码
+        input(type="password" ng-model="account.repassword")
+
+      md-input-container
+        label 身份
+        md-select(ng-model="account.role")
+          md-option(value="1") 个人
+          md-option(value="2") 公司
+  
+      md-input-container
+        md-button.md-raised.md-primary(ng-click="signup()") 注册

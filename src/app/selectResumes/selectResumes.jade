@@ -1,0 +1,15 @@
+.page.select-resumes-page
+  md-content
+    md-list
+      md-list-item.thead-tr
+        p 职位名称
+        p 简历
+        p 操作
+
+      md-list-item(ng-repeat="delivery in deliveries")
+        p {{ delivery.jobId.name }}
+        p(ng-click="viewResume()") {{ delivery.resumeId.title }}
+        p
+          md-button.md-raised.md-primary(ng-show="delivery.status == 0" ng-click="resolve(delivery._id)") 通过
+          md-button.md-raised.md-warn(ng-show="delivery.status == 0" ng-click="reject(delivery._id)") 拒绝
+          span(ng-hide="delivery.status == 0") 已处理

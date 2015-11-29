@@ -1,0 +1,16 @@
+.page.signin-page
+
+  md-content
+
+    .form-box
+
+      md-input-container
+        label 邮箱
+        input(ng-model="account.email")
+
+      md-input-container
+        label 密码
+        input(type="password" ng-model="account.password")
+
+      md-input-container
+        md-button.md-raised.md-primary(ng-click="signin()") 登录

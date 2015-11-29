@@ -1,0 +1,12 @@
+.page.list-deliveries-page
+  md-content
+    md-list
+      md-list-item.thead-tr
+        p 职位
+        p 简历
+        p 状态
+
+      md-list-item(ng-repeat="delivery in deliveries")
+        p {{ delivery.jobId.name }}
+        p {{ delivery.resumeId.title }}
+        p {{ delivery.status == 0 ? '投递成功' : (delivery.status == 1 ? '等待面试' : '未通过') }}

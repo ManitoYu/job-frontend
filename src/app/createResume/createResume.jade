@@ -1,0 +1,52 @@
+.page.create-resume-page
+  .form-box
+    md-content
+
+      md-input-container
+        label 简历名称
+        input(ng-model="resume.title")
+
+      div(layout="row")
+        // 姓名
+        md-input-container(flex)
+          label 姓名
+          input(ng-model="resume.name")
+
+        // 年龄
+        md-input-container(flex)
+          label 年龄
+          input(ng-model="resume.age")
+
+      div(layout="row")
+        // 籍贯
+        md-input-container(flex)
+          label 省份
+          md-select(ng-model="resume.province" ng-change="changeProvince()")
+            md-option(ng-repeat="province in provinces" value="{{ province }}") {{ province }}
+        md-input-container(flex)
+          label 城市
+          md-select(ng-model="resume.city") 
+            md-option(ng-repeat="city in cities" value="{{ city }}") {{ city }}   
+      
+      div(layout="row")
+        // 手机
+        md-input-container(flex)
+          label 手机
+          input(ng-model="resume.phone")
+        
+        // 电子邮箱
+        md-input-container(flex)
+          label 电子邮箱
+          input(ng-model="resume.email")
+      
+      md-input-container
+        label 教育经历
+        textarea(ng-model="resume.education")
+
+      md-input-container
+        label 实习经历
+        textarea(ng-model="resume.pratice")
+
+      md-input-container
+        md-button.md-raised.md-primary(ng-click="save()") 保存简历
+

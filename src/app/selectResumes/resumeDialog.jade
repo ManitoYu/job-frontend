@@ -1,0 +1,28 @@
+md-dialog
+
+  md-toolbar
+    .md-toolbar-tools
+      h2 简历
+
+  md-dialog-content(style="width: 600px;")
+    .md-dialog-content
+      md-subheader 基本信息
+      md-list
+        md-list-item
+          p {{ resume.name }}
+        md-list-item
+          p {{ resume.age }}
+        md-list-item
+          p {{ resume.phone }}
+        md-list-item
+          p {{ resume.email }}
+
+      md-subheader 教育经历
+      md-list
+        md-list-item
+          p {{ resume.education }}
+
+      md-subheader 实习经历
+      md-list
+        md-list-item
+          p {{ resume.pratice }}

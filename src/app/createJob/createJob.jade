@@ -1,0 +1,29 @@
+.page.create-job-page
+  md-content
+    .form-box
+      md-input-container
+        label 职位名称
+        input(ng-model="job.name")
+
+      md-input-container
+        label 薪资
+        input(ng-model="job.salary")
+
+      md-input-container
+        label 地点
+        input(ng-model="job.place")
+
+      md-input-container
+        label 学历
+        input(ng-model="job.education")
+
+      md-input-container
+        label 岗位职责
+        textarea(ng-model="job.duty")
+
+      md-input-container
+        label 职位要求
+        textarea(ng-model="job.requirement")
+  
+      md-input-container
+        md-button.md-raised.md-primary(ng-click="save()") 创建职位

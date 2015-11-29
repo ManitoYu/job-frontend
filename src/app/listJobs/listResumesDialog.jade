@@ -1,0 +1,13 @@
+md-dialog
+  md-toolbar
+    .md-toolbar-tools
+      h2 请选择简历
+
+  md-dialog-content
+    .md-dialog-content
+      md-input-container
+        md-select(ng-model="resumeId")
+          md-option(ng-repeat="resume in resumes" value="{{ resume._id }}") {{ resume.title }}
+  
+  .md-actions
+    md-button.md-raised.md-primary(ng-click="deliver()") 确认投递
